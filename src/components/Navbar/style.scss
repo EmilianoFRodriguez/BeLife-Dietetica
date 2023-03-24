@@ -1,0 +1,34 @@
+.containerNav {
+    background-color: #e22a2a;
+    color: black;
+    height: 100px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navLogo {
+            background-color: #333;
+        }
+
+        ul {
+            height: 100px;
+            margin: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+
+            li {
+                list-style: none;
+                padding-right: 30px;
+
+                a {
+                    color: whitesmoke;
+                    text-decoration: none;
+                    display: block;
+                }
+            }
+        }
+    }
+}
