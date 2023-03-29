@@ -2,6 +2,7 @@ import './App.scss';
 import React from 'react';
 import Navbar from './components/Navbar/index';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemListContainer from './components/itemListContainer';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/productos' element={<h1>LISTA DE PRODUCTOS</h1>}/>
+        <Route path='/productos' element={<h1><ItemListContainer /></h1>}/>
         <Route path='/sintacc' element={<h1>Productos SIN TACC</h1>}/>
         <Route path='/veggies' element={<h1>Productos VEGGIES</h1>}/>
         <Route path='/suplementos' element={<h1>SUPLEMENTOS</h1>}/>
