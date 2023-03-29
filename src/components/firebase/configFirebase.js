@@ -1,4 +1,5 @@
-import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs, doc } from 'firebase/firestore'
+import { initializeApp } from 'firebase/app'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDf_cVnTkucYdx1yVkRoCIXUwSJQnalVUI",
@@ -9,4 +10,14 @@ const firebaseConfig = {
   appId: "1:244403695824:web:90ad4b17bcccc1c48eeed5"
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const database = getFirestore(app);
+
+
+export default async function getItemsFromDatabase() {
+  const querySnapshot = await getDocs(collection(database, "products"))
+  const documents = querySnapshot.docs;
+  const dataProducts = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
+
+  return dataProducts;
+}
