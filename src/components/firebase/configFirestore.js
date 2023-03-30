@@ -1,5 +1,6 @@
-import { getFirestore, collection, getDocs, doc } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore'
 import { initializeApp } from 'firebase/app'
+import productList from '../../Products/productsList'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDf_cVnTkucYdx1yVkRoCIXUwSJQnalVUI",
@@ -15,9 +16,17 @@ const database = getFirestore(app);
 
 
 export default async function getItemsFromDatabase() {
-  const querySnapshot = await getDocs(collection(database, "products"))
+  const querySnapshot = await getDocs(collection(database, "products-list"))
   const documents = querySnapshot.docs;
   const dataProducts = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
 
   return dataProducts;
 }
+
+export async function exportData(){
+  for(let item of productList){
+    const collectionRef = collection(database, "products-list")
+    const {id} = await addDoc(collectionRef, item)
+    console.log("lista Creada", id);
+  }
+};

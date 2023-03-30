@@ -9,9 +9,9 @@ export default function Navbar() {
         <div className="containerNav">
             <nav className="navBar">
                 <div className="navLogo">
-                    <Link to="/" className="logo">
+                    <Link to="/" className="linkLogo">
                         <img
-                            src="" alt="Logo-BeLife"
+                            src="https://i.ibb.co/f0Hx03n/be-life-logo.jpg" alt="Logo-BeLife" className='logo'
                         />
                     </Link>
                 </div>

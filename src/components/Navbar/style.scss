@@ -1,7 +1,7 @@
 .containerNav {
-    background-color: #e22a2a;
+    background-color: #e43445 ;
     color: black;
-    height: 100px;
+    height: 120px;
 
     nav {
         display: flex;
@@ -9,11 +9,16 @@
         align-items: center;
 
         .navLogo {
-            background-color: #333;
+            height: 100px;
+            margin-left: 50px;
+            .logo {
+                width: auto;
+                height: 100%;
+            }
         }
 
         ul {
-            height: 100px;
+            height: 120px;
             margin: 0;
             text-align: center;
             display: flex;
@@ -24,7 +29,7 @@
                 padding-right: 30px;
 
                 a {
-                    color: whitesmoke;
+                    color: #faecee ;
                     text-decoration: none;
                     display: block;
                 }

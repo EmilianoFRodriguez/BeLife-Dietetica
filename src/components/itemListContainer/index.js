@@ -1,5 +1,6 @@
+import './style.scss'
 import React, { useState, useEffect } from 'react'
-import getItemsFromDatabase from '../firebase/configFirebase';
+import getItemsFromDatabase from '../firebase/configFirestore';
 
 
 export default function ItemListContainer() {
@@ -17,17 +18,19 @@ export default function ItemListContainer() {
 
 
   return (
-    <div>
-      <h1>PRODUCTOS</h1>
-      <div>
-        <ul>
+    <div className='productsContainer'>
+      <div className='titleContainer'>
+        <h2>PRODUCTOS</h2>
+      </div>
+      <div className='itemListContainer'>
+        <ul className='itemList'>
           {loading && <li>Cargando . . .</li>}
           {error && <li>ERROR 404</li>}
           {products.map((producto) => (
             <li key={producto.id}>
               <img src={producto.img} alt={producto.name} />
-              <h4>{producto.name}</h4>
-              <h4>{`$${producto.price}`}</h4>
+              <p>{producto.name}</p>
+              <p>{`$${producto.price}`}</p>
             </li>
           ))}
         </ul>
