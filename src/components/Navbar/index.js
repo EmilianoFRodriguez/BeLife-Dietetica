@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget';
 import './style.scss';
 
 
@@ -38,6 +39,7 @@ export default function Navbar() {
                         <Link to="/contacto" className="">Contacto</Link>
                     </li>
                 </ul>
+                <Link to="/cart"><CartWidget /></Link>
             </nav>
         </div>
     )

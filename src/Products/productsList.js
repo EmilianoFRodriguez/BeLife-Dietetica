@@ -11,7 +11,6 @@ const productsList = [
         "unit": 120,
         "stock": 27,
         "img": "",
-        "id": "1"
     },
     {
         "name": "Galletitas de Arroz",
@@ -25,7 +24,6 @@ const productsList = [
         "unit": 100,
         "stock": 37,
         "img": "",
-        "id": "2"
     },
     {
         "name": "Harina de Quínoa",
@@ -40,7 +38,6 @@ const productsList = [
         "unit": 250,
         "stock": 42,
         "img": "",
-        "id": "3"
     },
     {
         "name": "Harina de Castañas de cajú",
@@ -56,7 +53,6 @@ const productsList = [
         "unit": 180,
         "stock": 15,
         "img": "",
-        "id": "4"
     },
     {
         "name": "Polenta Organica",
@@ -71,7 +67,6 @@ const productsList = [
         "unit": 450,
         "stock": 22,
         "img": "",
-        "id": "5"
     },
     {
         "name": "Fécula de Mandioca",
@@ -87,7 +82,6 @@ const productsList = [
         "unit": 500,
         "stock": 39,
         "img": "",
-        "id": "6"
     },
     {
         "name": "Polvo para hornear",
@@ -102,7 +96,6 @@ const productsList = [
         "unit": 200,
         "stock": 51,
         "img": "",
-        "id": "7"
     },
     {
         "name": "Pan Rallado",
@@ -117,7 +110,6 @@ const productsList = [
         "unit": 500,
         "stock": 49,
         "img": "",
-        "id": "8"
     },
     {
         "name": "Azucar Negar",
@@ -131,7 +123,6 @@ const productsList = [
         "unit": 1000,
         "stock": 14,
         "img": "",
-        "id": "9"
     },
     {
         "name": "Pre-Mezcla para Panificados, Pastas, y Postres",
@@ -145,7 +136,6 @@ const productsList = [
         "unit": 500,
         "stock": 31,
         "img": "",
-        "id": "10"
     },
     {
         "name": "Almohaditas rellenas de frutilla, avellana",
@@ -160,7 +150,6 @@ const productsList = [
         "unit": 200,
         "stock": 2,
         "img": "",
-        "id": "11"
     },
     {
         "name": "Almohaditas de chocolate rellenas de chocolate blanco, limon",
@@ -175,7 +164,6 @@ const productsList = [
         "unit": 100,
         "stock": 44,
         "img": "",
-        "id": "12"
     },
     {
         "name": "Almohaditas de Salvado",
@@ -189,7 +177,6 @@ const productsList = [
         "unit": 100,
         "stock": 44,
         "img": "",
-        "id": "13"
     },
     {
         "name": "Almohaditas de arroz rellenas de frutilla, limon, chocolate",
@@ -206,7 +193,6 @@ const productsList = [
         "unit": 100,
         "stock": 57,
         "img": "",
-        "id": "14"
     },
     {
         "name": "Copos de maiz sin azucar",
@@ -220,7 +206,6 @@ const productsList = [
         "unit": 200,
         "stock": 30,
         "img": "",
-        "id": "15"
     },
     {
         "name": "Copos de maiz con azucar",
@@ -234,7 +219,6 @@ const productsList = [
         "unit": 200,
         "stock": 56,
         "img": "",
-        "id": "16"
     },
     {
         "name": "Copos de maiz con miel",
@@ -248,7 +232,6 @@ const productsList = [
         "unit": 200,
         "stock": 54,
         "img": "",
-        "id": "17"
     },
     {
         "name": "Aritos de colores",
@@ -262,7 +245,6 @@ const productsList = [
         "unit": 200,
         "stock": 4,
         "img": "",
-        "id": "18"
     },
     {
         "name": "Aritos de miel",
@@ -276,7 +258,6 @@ const productsList = [
         "unit": 200,
         "stock": 15,
         "img": "",
-        "id": "19"
     },
     {
         "name": "Ositos de miel",
@@ -290,7 +271,6 @@ const productsList = [
         "unit": 200,
         "stock": 4,
         "img": "",
-        "id": "20"
     },
     {
         "name": "Pizza vegetal a base de almendras",
@@ -306,7 +286,6 @@ const productsList = [
         "unit": 1,
         "stock": 21,
         "img": "",
-        "id": "21"
     },
     {
         "name": "Medallones vegetales",
@@ -322,7 +301,6 @@ const productsList = [
         "unit": 1,
         "stock": 3,
         "img": "",
-        "id": "22"
     },
     {
         "name": "Medallones vegetales rellenos",
@@ -339,7 +317,6 @@ const productsList = [
         "unit": 1,
         "stock": 12,
         "img": "",
-        "id": "22"
     },
     {
         "name": "Medallones vegetales Sin TACC de quinoa, zanahoria y cebolla caramelizada x4 unidades",
@@ -354,7 +331,6 @@ const productsList = [
         "unit": 1,
         "stock": 67,
         "img": "",
-        "id": "24"
     },
     {
         "name": "Medallones vegetales sin TACC de quinoa, espinaca y zucchini x4 unidades",
@@ -370,7 +346,6 @@ const productsList = [
         "unit": 1,
         "stock": 67,
         "img": "",
-        "id": "25"
     },
     {
         "name": "Bastoncitos vegetales sin TACC de espinaca, remolacha, morron y berenjena",
@@ -386,7 +361,6 @@ const productsList = [
         "unit": 1,
         "stock": 19,
         "img": "",
-        "id": "26"
     },
     {
         "name": "Bastoncitos vegetales sin TACC de remolacha, proteina de arveja y arroz yamani",
@@ -401,7 +375,6 @@ const productsList = [
         "unit": 1,
         "stock": 46,
         "img": "",
-        "id": "27"
     },
     {
         "name": "Bastoncitos vegetales sin TACC de morron, berenjena, proteina de arveja y arroz yamani",
@@ -417,7 +390,6 @@ const productsList = [
         "unit": 1,
         "stock": 40,
         "img": "",
-        "id": "28"
     },
     {
         "name": "Medallones vegetales sin TACC x2 unidades",
@@ -431,7 +403,6 @@ const productsList = [
         "unit": 1,
         "stock": 83,
         "img": "",
-        "id": "29"
     },
     {
         "name": "Ñoquis sin TACC",
@@ -446,7 +417,6 @@ const productsList = [
         "unit": 500,
         "stock": 4,
         "img": "",
-        "id": "30"
     }
 ];
 

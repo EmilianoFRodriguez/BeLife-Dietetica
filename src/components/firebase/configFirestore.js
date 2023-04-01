@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore'
+import { getFirestore, collection, doc, getDoc, getDocs, addDoc } from 'firebase/firestore'
 import { initializeApp } from 'firebase/app'
 import productList from '../../Products/productsList'
 
@@ -22,6 +22,20 @@ export default async function getItemsFromDatabase() {
 
   return dataProducts;
 }
+export async function getSingleItemFromDatabase(id) {
+  const productsCollection = collection(database, "products-list");
+  const productRef = doc(productsCollection, id);
+  const docSnapshot = await getDoc(productRef);
+
+  return {...docSnapshot.data(), id: docSnapshot.id};
+}
+
+// export async function getSingleItemFromDatabase(idItem) {
+//   const productRef = doc(database, "products-list", idItem);
+//   const docSnapshot = await getDoc(productRef);
+
+//   return {...docSnapshot.data(), id: docSnapshot.id};
+// }
 
 export async function exportData(){
   for(let item of productList){

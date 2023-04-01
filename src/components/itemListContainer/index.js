@@ -1,7 +1,8 @@
 import './style.scss'
 import React, { useState, useEffect } from 'react'
 import getItemsFromDatabase from '../firebase/configFirestore';
-
+import { Link } from 'react-router-dom';
+import Button from '../button/Button';
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -9,13 +10,11 @@ export default function ItemListContainer() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let promiseData = getItemsFromDatabase();
-    promiseData.then((products) => setProducts(products))
+    getItemsFromDatabase()
+      .then((products) => setProducts(products))
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
   }, []);
-
-
 
   return (
     <div className='productsContainer'>
@@ -28,9 +27,15 @@ export default function ItemListContainer() {
           {error && <li>ERROR 404</li>}
           {products.map((producto) => (
             <li key={producto.id}>
-              <img src={producto.img} alt={producto.name} />
-              <p>{producto.name}</p>
+              <div className='imgContainer'>
+                <img src={producto.img} alt={producto.name} />
+              </div>
+              <p>{producto.name} x { producto.unit } grs.</p>
               <p>{`$${producto.price}`}</p>
+              <Link to={`/detalle/${producto.id}`}>
+                <button>Detalle</button>
+              </Link>
+              <Button>Agregar al carrito</Button>
             </li>
           ))}
         </ul>
