@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemListContainer from './components/itemListContainer';
 import CartContainer from './components/CartContainer';
 import ItemDetailContainer from './components/itemDetailContainer';
-
 import Footer from './components/footer';
 import { exportData } from './components/firebase/firestoreExportData';
 
@@ -13,7 +12,7 @@ function App() {
   return (
     <div className="mainContainer">
       <BrowserRouter>
-        <button onClick={ exportData }>Exportar productos</button>
+        {/* <button onClick={ exportData }>Exportar productos</button> */}
         <Navbar />
         <div className='main'>
           <Routes>
