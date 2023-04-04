@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import getSingleItemFromDatabase from '../firebase/configFirestore';
+
 import { useParams } from 'react-router-dom';
+import getSingleItemFromDatabase from '../firebase/firestoreGetSingle';
 
 
 export default function ItemDetailContainer() {
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const params = useParams();
@@ -12,7 +13,7 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
         getSingleItemFromDatabase(idProduct)
-            .then((product) => setProduct(product))
+            .then((productSingle) => {setProduct(productSingle)})
             .catch((error) => setError(error))
             .finally(() => setLoading(false));
     }, []);

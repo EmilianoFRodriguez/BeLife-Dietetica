@@ -1,8 +1,8 @@
 import './style.scss'
 import React, { useState, useEffect } from 'react'
-import getItemsFromDatabase from '../firebase/configFirestore';
 import { Link } from 'react-router-dom';
 import Button from '../button/Button';
+import getItemsFromDatabase from '../firebase/firestoreGetAll';
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([]);
