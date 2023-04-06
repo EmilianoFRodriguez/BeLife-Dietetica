@@ -1,20 +1,32 @@
 import './style.scss'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Button from '../button/Button';
 import getItemsFromDatabase from '../firebase/firestoreGetAll';
+import getItemsByCategoryFromDatabase from '../firebase/firestoreGetCategory';
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const params = useParams();
+  const idCategory = params.idCategory;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  async function allOrCategory() {
+    if (idCategory === undefined) {
+      const response1 = await getItemsFromDatabase();
+      setProducts(response1);
+    } else {
+      const response2 = await getItemsByCategoryFromDatabase(idCategory);
+      setProducts(response2);
+    }
+  }
+
   useEffect(() => {
-    getItemsFromDatabase()
-      .then((products) => setProducts(products))
+    allOrCategory()
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, []);
+  }, [idCategory]);
 
   return (
     <div className='productsContainer'>
@@ -23,14 +35,14 @@ export default function ItemListContainer() {
       </div>
       <div className='itemListContainer'>
         <ul className='itemList'>
-          {loading && <li>Cargando . . .</li>}
-          {error && <li>ERROR 404</li>}
-          {products.map((producto) => (
+          {loading && <h3>Cargando . . .</h3>}
+          {error && <h3>ERROR 404</h3>}
+          {products?.map((producto) => (
             <li key={producto.id}>
               <div className='imgContainer'>
                 <img src={producto.img} alt={producto.name} />
               </div>
-              <p>{producto.name} x { producto.unit } grs.</p>
+              <p>{producto.name} x {producto.unit} grs.</p>
               <p>{`$${producto.price}`}</p>
               <Link to={`/detalle/${producto.id}`}>
                 <button>Detalle</button>

@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 import { initializeApp } from 'firebase/app'
 
 const firebaseConfig = {
@@ -21,4 +21,4 @@ export default async function getItemsByCategoryFromDatabase(categoryURL) {
     const dataProducts = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
     
     return dataProducts;
-}
+};

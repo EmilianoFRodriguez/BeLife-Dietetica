@@ -20,17 +20,19 @@ export default function ItemDetailContainer() {
     return (
         <div className='itemDetailContainer'>
             <ul className='itemDetail'>
-                {loading && <li>Cargando . . .</li>}
-                {error && <li>ERROR 404</li>}
-                <li key={product.id}>
+                {loading && <h3>Cargando . . .</h3>}
+                {error && <h3>ERROR 404</h3>}
+                {<li key={product.id}>
                     <div className='imgContainer'>
                         <img src={product.img} alt={product.name} />
                     </div>
                     <div className='detailContainer'>
                         <p>{product.name}</p>
+                        <p>{product.brand}</p>
+                        <p>{product.category}</p>
                         <p>{`$${product.price}`}</p>
                     </div>
-                </li>
+                </li>}
             </ul>
         </div>
     )

@@ -1,7 +1,7 @@
 const productsList = [
     {
         "name": "Tostada de Arroz",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "tostada"
@@ -14,7 +14,7 @@ const productsList = [
     },
     {
         "name": "Galletitas de Arroz",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "galletita"
@@ -27,7 +27,7 @@ const productsList = [
     },
     {
         "name": "Harina de Quínoa",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "harina",
@@ -41,7 +41,7 @@ const productsList = [
     },
     {
         "name": "Harina de Castañas de cajú",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "harina",
@@ -56,7 +56,7 @@ const productsList = [
     },
     {
         "name": "Polenta Organica",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "polenta",
@@ -70,7 +70,7 @@ const productsList = [
     },
     {
         "name": "Fécula de Mandioca",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "fecula",
@@ -85,7 +85,7 @@ const productsList = [
     },
     {
         "name": "Polvo para hornear",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "polvo",
@@ -99,7 +99,7 @@ const productsList = [
     },
     {
         "name": "Pan Rallado",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "pan",
@@ -113,7 +113,7 @@ const productsList = [
     },
     {
         "name": "Azucar Negar",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "azucar"
@@ -126,7 +126,7 @@ const productsList = [
     },
     {
         "name": "Pre-Mezcla para Panificados, Pastas, y Postres",
-        "category": "Sin TACC",
+        "category": "sintacc",
         "type": [
             "Sin TACC",
             "premezcla"
@@ -139,7 +139,7 @@ const productsList = [
     },
     {
         "name": "Almohaditas rellenas de frutilla, avellana",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "almohaditas",
             "frutilla",
@@ -153,7 +153,7 @@ const productsList = [
     },
     {
         "name": "Almohaditas de chocolate rellenas de chocolate blanco, limon",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "almohaditas",
             "chocolate",
@@ -167,7 +167,7 @@ const productsList = [
     },
     {
         "name": "Almohaditas de Salvado",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "almohaditas",
             "salvado"
@@ -180,7 +180,7 @@ const productsList = [
     },
     {
         "name": "Almohaditas de arroz rellenas de frutilla, limon, chocolate",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "almohaditas",
             "arroz",
@@ -196,7 +196,7 @@ const productsList = [
     },
     {
         "name": "Copos de maiz sin azucar",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "copos",
             "maiz"
@@ -209,7 +209,7 @@ const productsList = [
     },
     {
         "name": "Copos de maiz con azucar",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "copos",
             "maiz"
@@ -222,7 +222,7 @@ const productsList = [
     },
     {
         "name": "Copos de maiz con miel",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "copos",
             "maiz"
@@ -235,7 +235,7 @@ const productsList = [
     },
     {
         "name": "Aritos de colores",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "aritos",
             "colores"
@@ -248,7 +248,7 @@ const productsList = [
     },
     {
         "name": "Aritos de miel",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "aritos",
             "miel"
@@ -261,7 +261,7 @@ const productsList = [
     },
     {
         "name": "Ositos de miel",
-        "category": "Cereales",
+        "category": "cereales",
         "type": [
             "ositos",
             "miel"
@@ -274,7 +274,7 @@ const productsList = [
     },
     {
         "name": "Pizza vegetal a base de almendras",
-        "category": "Congelados",
+        "category": "veggie",
         "type": [
             "pizza",
             "vegetal",
@@ -289,7 +289,7 @@ const productsList = [
     },
     {
         "name": "Medallones vegetales",
-        "category": "Congelados",
+        "category": "veggie",
         "type": [
             "medallones",
             "vegetal",
@@ -304,7 +304,7 @@ const productsList = [
     },
     {
         "name": "Medallones vegetales rellenos",
-        "category": "Congelados",
+        "category": "veggie",
         "type": [
             "medallones",
             "rellenos",
@@ -320,7 +320,7 @@ const productsList = [
     },
     {
         "name": "Medallones vegetales Sin TACC de quinoa, zanahoria y cebolla caramelizada x4 unidades",
-        "category": "Congelados",
+        "category": "sintacc",
         "type": [
             "sin TACC",
             "zanahoria",
@@ -334,7 +334,7 @@ const productsList = [
     },
     {
         "name": "Medallones vegetales sin TACC de quinoa, espinaca y zucchini x4 unidades",
-        "category": "Congelados",
+        "category": "sintacc",
         "type": [
             "sin TACC",
             "quinoa",
@@ -349,7 +349,7 @@ const productsList = [
     },
     {
         "name": "Bastoncitos vegetales sin TACC de espinaca, remolacha, morron y berenjena",
-        "category": "Congelados",
+        "category": "veggie",
         "type": [
             "espinaca",
             "remolacha",
@@ -364,7 +364,7 @@ const productsList = [
     },
     {
         "name": "Bastoncitos vegetales sin TACC de remolacha, proteina de arveja y arroz yamani",
-        "category": "Congelados",
+        "category": "veggie",
         "type": [
             "remolacha",
             "proteina de arveja",
@@ -378,7 +378,7 @@ const productsList = [
     },
     {
         "name": "Bastoncitos vegetales sin TACC de morron, berenjena, proteina de arveja y arroz yamani",
-        "category": "Congelados",
+        "category": "veggie",
         "type": [
             "morron",
             "berenjena",
@@ -393,7 +393,7 @@ const productsList = [
     },
     {
         "name": "Medallones vegetales sin TACC x2 unidades",
-        "category": "Congelados",
+        "category": "sintacc",
         "type": [
             "sin TACC",
             "lentejas"
@@ -406,7 +406,7 @@ const productsList = [
     },
     {
         "name": "Ñoquis sin TACC",
-        "category": "Congelados",
+        "category": "sintacc",
         "type": [
             "sin TACC",
             "pastas",

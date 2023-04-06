@@ -20,4 +20,4 @@ export default async function getItemsFromDatabase() {
   const dataProducts = documents.map((doc) => ({ ...doc.data(), id: doc.id }));
 
   return dataProducts;
-}
+};
