@@ -42,12 +42,11 @@ export default function ItemListContainer() {
               <div className='imgContainer'>
                 <img src={producto.img} alt={producto.name} />
               </div>
-              <p>{producto.name} x {producto.unit} grs.</p>
+              <p>{producto.name}</p>
               <p>{`$${producto.price}`}</p>
               <Link to={`/detalle/${producto.id}`}>
                 <button>Detalle</button>
               </Link>
-              <Button>Agregar al carrito</Button>
             </li>
           ))}
         </ul>

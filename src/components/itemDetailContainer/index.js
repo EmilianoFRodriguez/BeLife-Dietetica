@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import getSingleItemFromDatabase from '../firebase/firestoreGetSingle';
+import cartContext from '../../context/cartContext';
 import './style.scss'
+import { ButtonAdd } from '../Counter/CounterButtons';
 
 export default function ItemDetailContainer() {
     const [product, setProduct] = useState({});
@@ -16,7 +18,17 @@ export default function ItemDetailContainer() {
             .catch((error) => setError(error))
             .finally(() => setLoading(false));
     }, []);
-    console.log("producto", product);
+
+
+    const { addItem } = useContext(cartContext);
+
+    function addToCart() {
+        alert(`Agregaste ${product} al carrito`);
+        addItem(product);
+    };
+    
+    const unity = (product.unity > 100) ? `${product.unit} grs.` : `${product.unit} Unidades.`;
+
     return (
         <div className='itemDetailContainer'>
             <ul className='itemDetail'>
@@ -27,11 +39,12 @@ export default function ItemDetailContainer() {
                         <img src={product.img} alt={product.name} />
                     </div>
                     <div className='detailContainer'>
-                        <p>{product.name}</p>
+                        <p>{product.name} x { unity }</p>
                         <p>{product.brand}</p>
                         <p>{product.category}</p>
                         <p>{`$${product.price}`}</p>
                     </div>
+                    <ButtonAdd addToCart={addToCart} />
                 </li>}
             </ul>
         </div>
