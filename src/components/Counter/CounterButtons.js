@@ -33,7 +33,7 @@ export default function CounterButtons({ initial, stock }) {
 }
 
 
-export function ButtonAdd(addToCart){
+export function ButtonAdd({addToCart}){
 
     return(
         <Button onTouchButton={() => addToCart()}>Agregar al carrito</Button>
