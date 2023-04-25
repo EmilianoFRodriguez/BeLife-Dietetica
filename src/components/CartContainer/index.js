@@ -4,8 +4,12 @@ import './style.scss';
 import CounterButtons from "../Counter/CounterButtons";
 
 export default function CartContainer() {
-    const { cart, removeItemFromCart } = useContext(cartContext);
-
+    const { cart } = useContext(cartContext);
+    const totalPriceItem = (a, b) => {
+        let total = a * b;
+        return total;
+    }
+    
     return (
         <div className="tableContainer">
             <table className="cartList">
@@ -28,11 +32,11 @@ export default function CartContainer() {
                                 </td>
                                 <td>{product.name}</td>
                                 <td>$ {product.price}</td>
-                                <td><CounterButtons initial={1} stock={product.stock}/></td>
+                                <td>{product.quantity}</td>
                                 <td>
                                     <button color="red">X</button>
                                 </td>
-                                <th>$ --,--</th>
+                                <th>$ {totalPriceItem(product.price, product.quantity)}</th>
                             </tr>
                         );
                     })}

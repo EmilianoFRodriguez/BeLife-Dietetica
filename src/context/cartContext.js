@@ -2,27 +2,61 @@ import React, { createContext, useState } from 'react'
 
 const cartContext = createContext({ cart: [] });
 const Provider = cartContext.Provider;
- 
+
 export function CartContextProvider({ children }) {
     const [cart, setCart] = useState([]);
 
-  /*  function addItem(item, count) {
+    // function addItem(item) {
+    //     const newCart = JSON.parse(JSON.stringify(cart));
+    //     let id = item.id;
+
+    //     if (isInCart(item.id)) {
+    //         setCart(
+    //             newCart.map((item) => {
+    //                 if (item.id === id) {
+    //                     return { ...item, quantity: item.quantity + 1 }
+    //                 } else {
+    //                     return item;
+    //                 }
+    //             })
+    //         );
+    //     } else {
+    //         return setCart([newCart, { ...item, quantity: 1 }])
+    //     }
+    // };
+
+    function addItem(item) {
         const newCart = JSON.parse(JSON.stringify(cart));
 
         if (isInCart(item.id)) {
             let index = cart.findIndex((itemInCart) => itemInCart.id === item.id);
-            newCart[index].count = newCart[index].count + count;
+      newCart[index].quantity = newCart[index].quantity + 1;
+            console.log("sima cantidad", newCart);
         } else {
-            newCart.push({ ...item, count });
+            newCart.push({ ...item, quantity: 1 });
+            console.log("agrega 1", newCart);
         }
-        setCart(newCart);
-    } */
+        setCart([...newCart]);
+    }
 
-    function addItem(item) {
+    // const addItem = (item) => {
+    //     const newCart = JSON.parse(JSON.stringify(cart));
+    //     const isInCart = newCart.find((itemInCart) => itemInCart.id === item.id);
+
+    //     if(isInCart){
+    //         setCart(newCart.map((itemInCart) => (itemInCart.id === item.id ?
+    //             { ...item, quanty: item.quanty + 1 }: item)));
+    //     } else{
+    //         setCart([newCart, item]);
+    //     }
+    // };
+
+
+    /*function addItem(item) {
         const newCart = [...cart];
         newCart.push(item);
         setCart(newCart);
-    }
+    }*/
 
     function clearCart() {
         /* vaciar carrito */
@@ -37,20 +71,20 @@ export function CartContextProvider({ children }) {
     }
 
     function getCountInCart() {
-        let total = 0;
-        cart.forEach((item) => total + item.count);
+        const total = cart.reduce((acc, item) => acc + item.price, 0)
         return total;
     }
 
     function isInCart(id) {
-        return cart.some((item) => item.id === id);
+        return cart.find((item) => item.id === id);
     }
 
     return (
-        <Provider value={ { cart, test: "ok", addItem, isInCart, removeItemFromCart } }>
+        <Provider value={{ cart, setCart, addItem, isInCart, removeItemFromCart }}>
             {children}
         </Provider>
     )
 }
+
 
 export default cartContext;

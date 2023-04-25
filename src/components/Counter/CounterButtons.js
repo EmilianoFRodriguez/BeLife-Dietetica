@@ -1,30 +1,27 @@
-import { useState } from "react";
+import { useState , useContext } from "react";
+import cartContext from "../../context/cartContext";
 import Button from "../button/Button";
 
 
-export default function CounterButtons({ initial, stock }) {
+export default function CounterButtons({ initial, addToCart }) {
     const [count, setCount] = useState(initial);
+    const { addItem } = useContext(cartContext);
 
-    const add = () => {
-        if (count > initial) {
-            setCount(count - 1);
-        }
-    };
 
     const subtract = () => {
-        if (count < stock) {
-            setCount(count + 1);
+        if (count > initial) {
+            setCount(count - 1);
         }
     };
 
     return (
         <div className="counterContainer">
             <div className="counterControl">
-                <Button color="red" onTouchButton={add}>
+                <Button color="red" onTouchButton={subtract}>
                     -
                 </Button>
                 <span className="itemcount_count">{count}</span>
-                <Button color="green" onTouchButton={subtract}>
+                <Button color="green" onTouchButton={() => addToCart()}>
                     +
                 </Button>
             </div>

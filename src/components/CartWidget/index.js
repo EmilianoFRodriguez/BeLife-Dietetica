@@ -5,15 +5,16 @@ import cartContext from '../../context/cartContext'
 
 
 export default function CartWidget() {
-  const { cart, test } = useContext(cartContext);
-  const cartCount = cart.length;
-  console.log("Estas en cart widget", test);
+  const { cart } = useContext(cartContext);
+  const cartCuantity = cart.reduce((acc, product) => {
+    return acc + product.quantity;
+  }, 0);
 
   return (
     <div className="cart-widget">
       <div>
         <BsCart4 className="icon" />
-        <span className="badge">{cartCount}</span>
+        <span className="badge">{cartCuantity}</span>
       </div>
     </div>
   );

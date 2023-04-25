@@ -44,7 +44,7 @@ export default function ItemDetailContainer() {
                         <p>{product.category}</p>
                         <p>{`$${product.price}`}</p>
                     </div>
-                    <ButtonAdd addToCart={addToCart} />
+                    <ButtonAdd addToCart={() => addToCart(product)} />
                 </li>}
             </ul>
         </div>
