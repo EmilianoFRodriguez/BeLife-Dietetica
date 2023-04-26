@@ -417,6 +417,76 @@ const productsList = [
         "unit": 500,
         "stock": 4,
         "img": "",
+    },
+    {
+        "name": "Proteina Gold 1kg",
+        "category": "suplementos",
+        "type": [
+            "Proteina",
+            "Suplemento",
+            "Fit"
+        ],
+        "brand": "Body Extreme Nutrition",
+        "price": 10200,
+        "unit": 1,
+        "stock": 10,
+        "img": "",
+    },
+    {
+        "name": "Animal Max",
+        "category": "suplemento",
+        "type": [
+            "Animal Max",
+            "Suplemento",
+            "Fit"
+        ],
+       "brand": "Body Extreme Nutrition",
+        "price": 13300,
+        "unit": 1,
+        "stock": 3,
+        "img": "",
+    },
+    {
+        "name": "BCAA Explosive Power 120 Cap.",
+        "category": "suplemento",
+        "type": [
+            "BCAA",
+            "Suplemento",
+            "Fit"
+        ],
+        "brand": "Body Extreme Nutrition",
+        "price": 8800,
+        "unit": 120,
+        "stock": 4,
+        "img": "",
+    },
+    {
+        "name": "Carblock 4000",
+        "category": "suplemento",
+        "type": [
+            "Inhibidor de carbohidratos",
+            "Suplemento",
+            "Fit"
+        ],
+        "brand": "Body Extreme Nutrition",
+        "price": 8800,
+        "unit": 120,
+        "stock": 9,
+        "img": "",
+    },
+    {
+        "name": "Power Complex 9000",
+        "category": "suplemento",
+        "type": [
+            "Power Complex",
+            "suplemento",
+            "Fit"
+        ],
+        "brand": "Body Extreme Nutrition",
+        "price": 12700,
+        "unit": 1,
+        "stock": 7,
+        "img": "",
     }
 ];
 
