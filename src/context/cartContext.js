@@ -11,11 +11,9 @@ export function CartContextProvider({ children }) {
 
         if (isInCart(item.id)) {
             let index = cart.findIndex((itemInCart) => itemInCart.id === item.id);
-      newCart[index].quantity = newCart[index].quantity + 1;
-            console.log("sima cantidad", newCart);
+            newCart[index].quantity = newCart[index].quantity + 1;
         } else {
             newCart.push({ ...item, quantity: 1 });
-            console.log("agrega 1", newCart);
         }
         setCart([...newCart]);
     };
@@ -25,26 +23,28 @@ export function CartContextProvider({ children }) {
 
         if (isInCart(item.id)) {
             let index = cart.findIndex((itemInCart) => itemInCart.id === item.id);
-      newCart[index].quantity = newCart[index].quantity - 1;
-            console.log("sima cantidad", newCart);
-        } else {
-            newCart.pop({ item });
-            console.log("agrega 1", newCart);
+            if (newCart[index].quantity > 1 ) {
+                newCart[index].quantity = newCart[index].quantity - 1;
+            } else {
+                newCart.pop({ item });
+            };
         }
         setCart([...newCart]);
     }
 
 
     function clearCart() {
-        /* vaciar carrito */
+        const newCart = [];
+        setCart(newCart)
+
     }
 
-    function removeItemFromCart(id) {
-        /* eliminar/filtrar items con id recibido */
-        /* ESTO ESTÁ MALLL  */
+    function removeItemFromCart(item) {
         const newCart = JSON.parse(JSON.stringify(cart));
-        newCart.pop();
-        setCart(newCart);
+        if (isInCart(item.id)) {
+            newCart.pop({ item });
+        }
+        setCart([...newCart]);
     }
 
     function getCountInCart() {
@@ -57,7 +57,7 @@ export function CartContextProvider({ children }) {
     }
 
     return (
-        <Provider value={{ cart, setCart, addItem, delItem, isInCart, removeItemFromCart }}>
+        <Provider value={{ cart, setCart, addItem, delItem, clearCart, isInCart, removeItemFromCart }}>
             {children}
         </Provider>
     )

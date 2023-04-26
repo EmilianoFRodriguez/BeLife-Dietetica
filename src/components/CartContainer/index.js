@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import cartContext from "../../context/cartContext";
 import './style.scss';
-import CounterButtons from "../Counter/CounterButtons";
+import CounterButtons, { ButtonClear, ButtonRemoveItem } from "../Counter/CounterButtons";
 
 export default function CartContainer() {
-    const { cart } = useContext(cartContext);
+    const { cart, clearCart, removeItemFromCart } = useContext(cartContext);
     const totalPriceItem = (a, b) => {
         let total = a * b;
         return total;
@@ -34,7 +34,7 @@ export default function CartContainer() {
                                 <td>$ {product.price}</td>
                                 <td>{product.quantity}</td>
                                 <td>
-                                    <button color="red">X</button>
+                                    <ButtonRemoveItem removeItemFromCart={() => removeItemFromCart(product)} />
                                 </td>
                                 <th>$ {totalPriceItem(product.price, product.quantity)}</th>
                             </tr>
@@ -44,7 +44,7 @@ export default function CartContainer() {
             </table>
 
             <div className="cartListDetail">
-                <h3>El total de tu compra es de $ --,--</h3>
+                <ButtonClear clearCart={() => clearCart()} />                <h3>El total de tu compra es de $ --,--</h3>
             </div>
         </div>
     );

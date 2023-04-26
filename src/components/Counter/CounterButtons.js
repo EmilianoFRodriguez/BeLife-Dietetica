@@ -42,3 +42,17 @@ export function ButtonDel({delToCart}){
         <Button onTouchButton={() => delToCart()}>Eliminar</Button>
     );
 };
+
+export function ButtonClear({clearCart}){
+
+    return(
+        <Button onTouchButton={() => clearCart()}>Vaciar Carrito</Button>
+    );
+};
+
+export function ButtonRemoveItem({removeItemFromCart}){
+
+    return(
+        <Button onTouchButton={() => removeItemFromCart()}>X</Button>
+    );
+};
