@@ -420,7 +420,7 @@ const productsList = [
     },
     {
         "name": "Proteina Gold 1kg",
-        "category": "suplementoss",
+        "category": "suplementos",
         "type": [
             "Proteina",
             "Suplemento",
