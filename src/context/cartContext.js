@@ -6,25 +6,6 @@ const Provider = cartContext.Provider;
 export function CartContextProvider({ children }) {
     const [cart, setCart] = useState([]);
 
-    // function addItem(item) {
-    //     const newCart = JSON.parse(JSON.stringify(cart));
-    //     let id = item.id;
-
-    //     if (isInCart(item.id)) {
-    //         setCart(
-    //             newCart.map((item) => {
-    //                 if (item.id === id) {
-    //                     return { ...item, quantity: item.quantity + 1 }
-    //                 } else {
-    //                     return item;
-    //                 }
-    //             })
-    //         );
-    //     } else {
-    //         return setCart([newCart, { ...item, quantity: 1 }])
-    //     }
-    // };
-
     function addItem(item) {
         const newCart = JSON.parse(JSON.stringify(cart));
 
@@ -37,26 +18,22 @@ export function CartContextProvider({ children }) {
             console.log("agrega 1", newCart);
         }
         setCart([...newCart]);
+    };
+
+    function delItem(item) {
+        const newCart = JSON.parse(JSON.stringify(cart));
+
+        if (isInCart(item.id)) {
+            let index = cart.findIndex((itemInCart) => itemInCart.id === item.id);
+      newCart[index].quantity = newCart[index].quantity - 1;
+            console.log("sima cantidad", newCart);
+        } else {
+            newCart.pop({ item });
+            console.log("agrega 1", newCart);
+        }
+        setCart([...newCart]);
     }
 
-    // const addItem = (item) => {
-    //     const newCart = JSON.parse(JSON.stringify(cart));
-    //     const isInCart = newCart.find((itemInCart) => itemInCart.id === item.id);
-
-    //     if(isInCart){
-    //         setCart(newCart.map((itemInCart) => (itemInCart.id === item.id ?
-    //             { ...item, quanty: item.quanty + 1 }: item)));
-    //     } else{
-    //         setCart([newCart, item]);
-    //     }
-    // };
-
-
-    /*function addItem(item) {
-        const newCart = [...cart];
-        newCart.push(item);
-        setCart(newCart);
-    }*/
 
     function clearCart() {
         /* vaciar carrito */
@@ -80,7 +57,7 @@ export function CartContextProvider({ children }) {
     }
 
     return (
-        <Provider value={{ cart, setCart, addItem, isInCart, removeItemFromCart }}>
+        <Provider value={{ cart, setCart, addItem, delItem, isInCart, removeItemFromCart }}>
             {children}
         </Provider>
     )

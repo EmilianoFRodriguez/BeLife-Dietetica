@@ -420,7 +420,7 @@ const productsList = [
     },
     {
         "name": "Proteina Gold 1kg",
-        "category": "suplementos",
+        "category": "suplementoss",
         "type": [
             "Proteina",
             "Suplemento",
@@ -434,7 +434,7 @@ const productsList = [
     },
     {
         "name": "Animal Max",
-        "category": "suplemento",
+        "category": "suplementos",
         "type": [
             "Animal Max",
             "Suplemento",
@@ -448,7 +448,7 @@ const productsList = [
     },
     {
         "name": "BCAA Explosive Power 120 Cap.",
-        "category": "suplemento",
+        "category": "suplementos",
         "type": [
             "BCAA",
             "Suplemento",
@@ -462,7 +462,7 @@ const productsList = [
     },
     {
         "name": "Carblock 4000",
-        "category": "suplemento",
+        "category": "suplementos",
         "type": [
             "Inhibidor de carbohidratos",
             "Suplemento",
@@ -476,7 +476,7 @@ const productsList = [
     },
     {
         "name": "Power Complex 9000",
-        "category": "suplemento",
+        "category": "suplementos",
         "type": [
             "Power Complex",
             "suplemento",

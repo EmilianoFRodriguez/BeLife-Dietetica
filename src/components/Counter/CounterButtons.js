@@ -5,7 +5,6 @@ import Button from "../button/Button";
 
 export default function CounterButtons({ initial, addToCart }) {
     const [count, setCount] = useState(initial);
-    const { addItem } = useContext(cartContext);
 
 
     const subtract = () => {
@@ -34,5 +33,12 @@ export function ButtonAdd({addToCart}){
 
     return(
         <Button onTouchButton={() => addToCart()}>Agregar al carrito</Button>
+    );
+};
+
+export function ButtonDel({delToCart}){
+
+    return(
+        <Button onTouchButton={() => delToCart()}>Eliminar</Button>
     );
 };
