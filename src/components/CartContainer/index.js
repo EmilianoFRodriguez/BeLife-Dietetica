@@ -1,15 +1,22 @@
 import React, { useContext } from "react";
 import cartContext from "../../context/cartContext";
 import './style.scss';
-import CounterButtons, { ButtonClear, ButtonRemoveItem } from "../Counter/CounterButtons";
+import Button from "../button/Button";
+import { ButtonClear, ButtonRemoveItem } from "../Counter/CounterButtons";
 
 export default function CartContainer() {
-    const { cart, clearCart, removeItemFromCart } = useContext(cartContext);
+    const { cart, addItem, delItem, clearCart, removeItemFromCart } = useContext(cartContext);
     const totalPriceItem = (a, b) => {
         let total = a * b;
         return total;
     }
-    
+    function addToCart(product) {
+        addItem(product);
+    };
+    function delToCart(product) {
+        delItem(product);
+    };
+
     return (
         <div className="tableContainer">
             <table className="cartList">
@@ -32,11 +39,18 @@ export default function CartContainer() {
                                 </td>
                                 <td>{product.name}</td>
                                 <td>$ {product.price}</td>
-                                <td>{product.quantity}</td>
+                                <td>
+                                    <div className="counterControl">
+                                        <Button color="red" onTouchButton={() => delToCart(product)}>-</Button>
+                                        {product.quantity}
+                                        <Button color="green" onTouchButton={() => addToCart(product)}>+</Button>
+                                    </div>
+                                </td>
                                 <td>
                                     <ButtonRemoveItem removeItemFromCart={() => removeItemFromCart(product)} />
                                 </td>
-                                <th>$ {totalPriceItem(product.price, product.quantity)}</th>
+                                <th>
+                                    $ {totalPriceItem(product.price, product.quantity)}</th>
                             </tr>
                         );
                     })}
@@ -44,7 +58,8 @@ export default function CartContainer() {
             </table>
 
             <div className="cartListDetail">
-                <ButtonClear clearCart={() => clearCart()} />                <h3>El total de tu compra es de $ --,--</h3>
+                <ButtonClear clearCart={() => clearCart()} />
+                <h3>El total de tu compra es de $ --,--</h3>
             </div>
         </div>
     );

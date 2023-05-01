@@ -17,21 +17,22 @@ export default function ItemDetailContainer() {
             .then((productSingle) => { setProduct(productSingle) })
             .catch((error) => setError(error))
             .finally(() => setLoading(false));
+
     }, []);
 
 
     const { addItem, delItem } = useContext(cartContext);
 
     function addToCart() {
-        alert(`Agregaste ${product} al carrito`);
+        alert(`Agregaste ${product.name} al carrito`);
         addItem(product);
     };
     function delToCart() {
         alert(`Eliminaste ${product} del carrito`);
         delItem(product);
     };
-    
-    const unity = (product.unity > 100) ? `${product.unit} grs.` : `${product.unit} Unidades.`;
+
+    const unity = (product.unity > 15) ? `${product.unit} grs.` : `${product.unit} Unidades.`;
 
     return (
         <div className='itemDetailContainer'>
@@ -43,7 +44,7 @@ export default function ItemDetailContainer() {
                         <img src={product.img} alt={product.name} />
                     </div>
                     <div className='detailContainer'>
-                        <p>{product.name} x { unity }</p>
+                        <p>{product.name} x {unity}</p>
                         <p>{product.brand}</p>
                         <p>{product.category}</p>
                         <p>{`$${product.price}`}</p>

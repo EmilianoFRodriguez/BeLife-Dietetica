@@ -10,7 +10,7 @@ const productsList = [
         "price": 90,
         "unit": 120,
         "stock": 27,
-        "img": "",
+        "img": "https://i.ibb.co/q54GRNV/Tostada-de-arroz-lulemuu.png",
     },
     {
         "name": "Galletitas de Arroz",
@@ -23,7 +23,7 @@ const productsList = [
         "price": 100,
         "unit": 100,
         "stock": 37,
-        "img": "",
+        "img": "https://i.ibb.co/6y43qTv/Galletitas-de-Arroz-Crispino.png",
     },
     {
         "name": "Harina de Quínoa",
@@ -37,7 +37,7 @@ const productsList = [
         "price": 330,
         "unit": 250,
         "stock": 42,
-        "img": "",
+        "img": "https://i.ibb.co/hZjWzY9/Harina-de-quinoa.jpg",
     },
     {
         "name": "Harina de Castañas de cajú",
@@ -52,7 +52,7 @@ const productsList = [
         "price": 330,
         "unit": 180,
         "stock": 15,
-        "img": "",
+        "img": "https://i.ibb.co/yyBfkc4/Harina-de-casta-as-de-Caju.png",
     },
     {
         "name": "Polenta Organica",
@@ -66,7 +66,7 @@ const productsList = [
         "price": 130,
         "unit": 450,
         "stock": 22,
-        "img": "",
+        "img": "https://i.ibb.co/HntcDCR/Polenta-Organica.jpg",
     },
     {
         "name": "Fécula de Mandioca",
@@ -81,7 +81,7 @@ const productsList = [
         "price": 230,
         "unit": 500,
         "stock": 39,
-        "img": "",
+        "img": "https://i.ibb.co/S6Jk2s8/Fecula-de-Mandioca.jpg",
     },
     {
         "name": "Polvo para hornear",
@@ -95,7 +95,7 @@ const productsList = [
         "price": 140,
         "unit": 200,
         "stock": 51,
-        "img": "",
+        "img": "https://i.ibb.co/nCYFWt4/Polvo-para-Hornear.jpg",
     },
     {
         "name": "Pan Rallado",
@@ -109,7 +109,7 @@ const productsList = [
         "price": 220,
         "unit": 500,
         "stock": 49,
-        "img": "",
+        "img": "https://i.ibb.co/SXK2gP9/Pan-Rallado-sin-tacc.jpg",
     },
     {
         "name": "Azucar Negar",
@@ -122,51 +122,75 @@ const productsList = [
         "price": 240,
         "unit": 1000,
         "stock": 14,
-        "img": "",
+        "img": "https://i.ibb.co/VgTfXV1/Azucar-negra.png",
     },
     {
-        "name": "Pre-Mezcla para Panificados, Pastas, y Postres",
+        "name": "Pre-Mezcla base Multiple para Panificados, Pastas, y Postres",
         "category": "sintacc",
         "type": [
             "Sin TACC",
             "premezcla"
         ],
-        "brand": "",
-        "price": 150,
+        "brand": "Dimax",
+        "price": 1500,
         "unit": 500,
         "stock": 31,
-        "img": "",
+        "img": "https://i.ibb.co/Y2zg4XD/Pre-Mezcla-para-Panificados.png",
     },
     {
-        "name": "Almohaditas rellenas de frutilla, avellana",
+        "name": "Almohaditas rellenas de frutilla",
         "category": "cereales",
         "type": [
             "almohaditas",
             "frutilla",
+        ],
+        "brand": "",
+        "price": 70,
+        "unit": 200,
+        "stock": 2,
+        "img": "https://i.ibb.co/swC7jMT/Almohaditas-Rellenas-de-frutilla.png",
+    },
+    {
+        "name": "Almohaditas rellenas de avellana",
+        "category": "cereales",
+        "type": [
+            "almohaditas",
             "avellana"
         ],
         "brand": "",
         "price": 70,
         "unit": 200,
         "stock": 2,
-        "img": "",
+        "img": "https://i.ibb.co/qMwWNvM/Almohaditas-Rellenas-de-avellanas.png",
     },
     {
-        "name": "Almohaditas de chocolate rellenas de chocolate blanco, limon",
+        "name": "Almohaditas rellenas de chocolate blanco",
         "category": "cereales",
         "type": [
             "almohaditas",
-            "chocolate",
+            "chocolate blanco",
+        ],
+        "brand": "",
+        "price": 70,
+        "unit": 100,
+        "stock": 44,
+        "img": "https://i.ibb.co/6NQDGyz/Almohaditas-Rellenas-de-chocolate-blanco.jpg",
+    },
+    {
+        "name": "Almohaditas rellenas de limon",
+        "category": "cereales",
+        "type": [
+            "almohaditas",
             "limon"
         ],
         "brand": "",
         "price": 70,
         "unit": 100,
         "stock": 44,
-        "img": "",
+        "img": "https://i.ibb.co/DWCvDWq/Almohaditas-Rellenas-de-Limon.png",
     },
     {
-        "name": "Almohaditas de Salvado",
+        "name": "Almohaditas de Salvado rellenas",
         "category": "cereales",
         "type": [
             "almohaditas",
@@ -176,23 +200,7 @@ const productsList = [
         "price": 60,
         "unit": 100,
         "stock": 44,
-        "img": "",
-    },
-    {
-        "name": "Almohaditas de arroz rellenas de frutilla, limon, chocolate",
-        "category": "cereales",
-        "type": [
-            "almohaditas",
-            "arroz",
-            "frutilla",
-            "limon",
-            "chocolate"
-        ],
-        "brand": "",
-        "price": 70,
-        "unit": 100,
-        "stock": 57,
-        "img": "",
+        "img": "https://i.ibb.co/1bhrd5c/Almohaditas-Integrales.jpg",
     },
     {
         "name": "Copos de maiz sin azucar",
@@ -205,7 +213,7 @@ const productsList = [
         "price": 60,
         "unit": 200,
         "stock": 30,
-        "img": "",
+        "img": "https://i.ibb.co/HH8XgTH/Copos-de-maiz-sin-azucar.png",
     },
     {
         "name": "Copos de maiz con azucar",
@@ -218,7 +226,7 @@ const productsList = [
         "price": 80,
         "unit": 200,
         "stock": 56,
-        "img": "",
+        "img": "https://i.ibb.co/nRQbZw7/Copoz-de-maiz-con-azucar.webp",
     },
     {
         "name": "Copos de maiz con miel",
@@ -231,7 +239,7 @@ const productsList = [
         "price": 80,
         "unit": 200,
         "stock": 54,
-        "img": "",
+        "img": "https://i.ibb.co/W0bNB6H/Copoz-de-maiz-con-miel.png",
     },
     {
         "name": "Aritos de colores",
@@ -244,7 +252,7 @@ const productsList = [
         "price": 150,
         "unit": 200,
         "stock": 4,
-        "img": "",
+        "img": "https://i.ibb.co/QdVqZQ7/Aritos-de-colores.jpg",
     },
     {
         "name": "Aritos de miel",
@@ -257,7 +265,7 @@ const productsList = [
         "price": 150,
         "unit": 200,
         "stock": 15,
-        "img": "",
+        "img": "https://i.ibb.co/FYTngc4/Aritos-de-miel.png",
     },
     {
         "name": "Ositos de miel",
@@ -270,10 +278,23 @@ const productsList = [
         "price": 160,
         "unit": 200,
         "stock": 4,
-        "img": "",
+        "img": "https://i.ibb.co/MpWg98R/Ositos-de-miel.jpg",
     },
     {
-        "name": "Pizza vegetal a base de almendras",
+        "name": "Ositos de frutilla",
+        "category": "cereales",
+        "type": [
+            "ositos",
+            "frutilla"
+        ],
+        "brand": "",
+        "price": 160,
+        "unit": 200,
+        "stock": 4,
+        "img": "https://i.ibb.co/82DWcG1/Ositos-de-frutilla.png",
+    },
+    {
+        "name": "Pizza de Muzzalmendras - SIN TACC",
         "category": "veggie",
         "type": [
             "pizza",
@@ -285,7 +306,7 @@ const productsList = [
         "price": 740,
         "unit": 1,
         "stock": 21,
-        "img": "",
+        "img": "https://i.ibb.co/dWQVrR5/Pizza-Muzzalmendras.png",
     },
     {
         "name": "Medallones vegetales",
@@ -298,9 +319,9 @@ const productsList = [
         ],
         "brand": "UFF",
         "price": 290,
-        "unit": 1,
+        "unit": 4,
         "stock": 3,
-        "img": "",
+        "img": "https://i.ibb.co/RcP70Mv/Medallones-UFF.jpg",
     },
     {
         "name": "Medallones vegetales rellenos",
@@ -314,12 +335,12 @@ const productsList = [
         ],
         "brand": "UFF",
         "price": 350,
-        "unit": 1,
+        "unit": 4,
         "stock": 12,
-        "img": "",
+        "img": "https://i.ibb.co/RcP70Mv/Medallones-UFF.jpg",
     },
     {
-        "name": "Medallones vegetales Sin TACC de quinoa, zanahoria y cebolla caramelizada x4 unidades",
+        "name": "Medallones vegetales Sin TACC de quinoa, zanahoria y cebolla caramelizada",
         "category": "sintacc",
         "type": [
             "sin TACC",
@@ -328,12 +349,12 @@ const productsList = [
         ],
         "brand": "Mundo Vegetal",
         "price": 290,
-        "unit": 1,
+        "unit": 4,
         "stock": 67,
-        "img": "",
+        "img": "https://i.ibb.co/M7ZqvN1/Medallones-vegetales-Sin-TACC-de-quinoa-zanahoria-y-cebolla-caramelizada-x4-unidades.png",
     },
     {
-        "name": "Medallones vegetales sin TACC de quinoa, espinaca y zucchini x4 unidades",
+        "name": "Medallones vegetales sin TACC de quinoa, espinaca y zucchini",
         "category": "sintacc",
         "type": [
             "sin TACC",
@@ -343,9 +364,9 @@ const productsList = [
         ],
         "brand": "Mundo Vegetal",
         "price": 290,
-        "unit": 1,
+        "unit": 4,
         "stock": 67,
-        "img": "",
+        "img": "https://i.ibb.co/H4m1FH6/Medallones-vegetales-sin-TACC-de-quinoa-espinaca-y-zucchini-x4-unidades.jpg",
     },
     {
         "name": "Bastoncitos vegetales sin TACC de espinaca, remolacha, morron y berenjena",
@@ -358,51 +379,90 @@ const productsList = [
         ],
         "brand": "Mundo Vegetal",
         "price": 270,
-        "unit": 1,
+        "unit": 4,
         "stock": 19,
-        "img": "",
+        "img": "https://i.ibb.co/PT7Zm6R/Medallones-vegetales-sin-TACC-de-espinaca-remolacha-morron-y-berenjena.jpg",
     },
     {
-        "name": "Bastoncitos vegetales sin TACC de remolacha, proteina de arveja y arroz yamani",
+        "name": "Bastoncitos vegetales sin TACC de espinaca, proteina de arveja y arroz yamani",
         "category": "veggie",
         "type": [
-            "remolacha",
+            "espinaca",
             "proteina de arveja",
             "proteina de arroz yamani"
         ],
         "brand": "Mundo Vegetal",
         "price": 270,
-        "unit": 1,
+        "unit": 8,
         "stock": 46,
-        "img": "",
+        "img": "https://i.ibb.co/ncZL4hc/Bastoncitos-vegetales-sin-TACC-de-espinaca-proteina-de-arveja-y-arroz-yamani.png",
     },
     {
-        "name": "Bastoncitos vegetales sin TACC de morron, berenjena, proteina de arveja y arroz yamani",
+        "name": "Bastoncitos vegetales sin TACC de morron, berenjena, soja organica y arroz yamani",
         "category": "veggie",
         "type": [
             "morron",
             "berenjena",
-            "proteina de arveja",
+            "soja organica",
             "proteina de arroz yamani"
         ],
         "brand": "Mundo Vegetal",
         "price": 270,
-        "unit": 1,
+        "unit": 8,
         "stock": 40,
-        "img": "",
+        "img": "https://i.ibb.co/H7WJVjq/Bastoncitos-vegetales-sin-TACC-de-morron-berenjena-soja-organica-y-arroz-yamani.png",
     },
     {
-        "name": "Medallones vegetales sin TACC x2 unidades",
+        "name": "Milanesas vegetales de soja sin TACC ",
+        "category": "sintacc",
+        "type": [
+            "sin TACC",
+            "soja"
+        ],
+        "brand": "VIA VEG",
+        "price": 370,
+        "unit": 2,
+        "stock": 83,
+        "img": "https://i.ibb.co/wYnM5ry/Milanesa-de-soja-Viaveg.png",
+    },
+    {
+        "name": "Milanesas vegetales de arvejas sin TACC ",
+        "category": "sintacc",
+        "type": [
+            "sin TACC",
+            "arvejas"
+        ],
+        "brand": "VIA VEG",
+        "price": 370,
+        "unit": 2,
+        "stock": 83,
+        "img": "https://i.ibb.co/YyB3tgM/Milanesa-de-arvejas-Viaveg.png",
+    },
+    {
+        "name": "Milanesas vegetales de garvanzos sin TACC ",
+        "category": "sintacc",
+        "type": [
+            "sin TACC",
+            "garvanzos"
+        ],
+        "brand": "VIA VEG",
+        "price": 370,
+        "unit": 2,
+        "stock": 83,
+        "img": "https://i.ibb.co/m5tng6s/Milanesa-de-garbanzos-Viaveg.png",
+    },
+    {
+        "name": "Milanesas vegetales de lentejas sin TACC ",
         "category": "sintacc",
         "type": [
             "sin TACC",
             "lentejas"
         ],
         "brand": "VIA VEG",
-        "price": 170,
-        "unit": 1,
+        "price": 370,
+        "unit": 2,
         "stock": 83,
-        "img": "",
+        "img": "https://i.ibb.co/X4twCzB/Milanesa-de-lentejas-Viaveg.png",
     },
     {
         "name": "Ñoquis sin TACC",
@@ -416,7 +476,7 @@ const productsList = [
         "price": 320,
         "unit": 500,
         "stock": 4,
-        "img": "",
+        "img": "https://i.ibb.co/dLJZn1f/oquis-libre-de-gluten.jpg",
     },
     {
         "name": "Proteina Gold 1kg",
@@ -430,7 +490,7 @@ const productsList = [
         "price": 10200,
         "unit": 1,
         "stock": 10,
-        "img": "",
+        "img": "https://i.ibb.co/f09281P/Proteina-Gold-1kg.png",
     },
     {
         "name": "Animal Max",
@@ -444,7 +504,7 @@ const productsList = [
         "price": 13300,
         "unit": 1,
         "stock": 3,
-        "img": "",
+        "img": "https://i.ibb.co/4RbJ3q5/Animal-Max.png",
     },
     {
         "name": "BCAA Explosive Power 120 Cap.",
@@ -458,7 +518,7 @@ const productsList = [
         "price": 8800,
         "unit": 120,
         "stock": 4,
-        "img": "",
+        "img": "https://i.ibb.co/MfVm2Dp/BCAA.png",
     },
     {
         "name": "Carblock 4000",
@@ -472,7 +532,7 @@ const productsList = [
         "price": 8800,
         "unit": 120,
         "stock": 9,
-        "img": "",
+        "img": "https://i.ibb.co/gRB7QJf/CARBLOCK-4000.png",
     },
     {
         "name": "Power Complex 9000",
@@ -486,7 +546,7 @@ const productsList = [
         "price": 12700,
         "unit": 1,
         "stock": 7,
-        "img": "",
+        "img": "https://i.ibb.co/vhnWSzn/POWER-COMPLEX-9000.png",
     }
 ];
 
