@@ -27,10 +27,6 @@ export default function ItemDetailContainer() {
         alert(`Agregaste ${product.name} al carrito`);
         addItem(product);
     };
-    function delToCart() {
-        alert(`Eliminaste ${product} del carrito`);
-        delItem(product);
-    };
 
     const unity = (product.unity > 15) ? `${product.unit} grs.` : `${product.unit} Unidades.`;
 
@@ -43,14 +39,17 @@ export default function ItemDetailContainer() {
                     <div className='imgContainer'>
                         <img src={product.img} alt={product.name} />
                     </div>
-                    <div className='detailContainer'>
-                        <p>{product.name} x {unity}</p>
-                        <p>{product.brand}</p>
-                        <p>{product.category}</p>
-                        <p>{`$${product.price}`}</p>
+                    <div className='dataContainer'>
+                        <div className='detailContainer'>
+                            <p>{product.name} x {unity}</p>
+                            <p>{product.brand}</p>
+                            <p>{product.category}</p>
+                            <p>{`$${product.price}`}</p>
+                        </div>
+                        <div className='buttonContainer'>
+                            <ButtonAdd addToCart={() => addToCart(product)} />
+                        </div>
                     </div>
-                    <ButtonAdd addToCart={() => addToCart(product)} />
-                    <ButtonDel delToCart={() => delToCart(product)} />
                 </li>}
             </ul>
         </div>

@@ -29,18 +29,22 @@
                 }
             }
 
-            .detailContainer {
+            .dataContainer {
                 display: grid;
                 place-items: center;
-                height: 200px;
-                width: 200px;
-                margin: auto;
-                border: solid 1px black;
+
+                .detailContainer {
+                    display: grid;
+                    place-items: center;
+                    height: 200px;
+                    width: 200px;
+                    margin: auto;
+                    border: solid 1px black;
+                }
             }
         }
 
         li:hover {
-            cursor: pointer;
             box-shadow: 0px 6px 5px #dedede;
             transform: scale(1.02);
         }
