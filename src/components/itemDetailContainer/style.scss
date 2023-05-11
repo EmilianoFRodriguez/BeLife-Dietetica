@@ -8,7 +8,8 @@
             min-width: 600px;
             height: 400px;
             padding: 10px 15px;
-            background: url(https://i.ibb.co/QY7xKRX/fondo-1.jpg);
+            background: url(https://i.ibb.co/QY7xKRX/fondo-1.jpg) no-repeat center center;
+            background-size: cover;
             box-shadow: 0px 5px 10px #ececed;
             text-align: center;
             margin: 10px 15px;
@@ -44,7 +45,7 @@
             }
         }
 
-        li:hover {
+        img:hover {
             box-shadow: 0px 6px 5px #dedede;
             transform: scale(1.02);
         }
