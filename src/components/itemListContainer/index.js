@@ -1,7 +1,6 @@
 import './style.scss'
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom';
-import Button from '../button/Button';
 import getItemsFromDatabase from '../firebase/firestoreGetAll';
 import getItemsByCategoryFromDatabase from '../firebase/firestoreGetCategory';
 

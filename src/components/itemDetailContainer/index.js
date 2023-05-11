@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import getSingleItemFromDatabase from '../firebase/firestoreGetSingle';
 import cartContext from '../../context/cartContext';
 import './style.scss'
-import { ButtonAdd, ButtonDel } from '../Counter/CounterButtons';
+import { ButtonAdd } from '../Counter/CounterButtons';
 
 export default function ItemDetailContainer() {
     const [product, setProduct] = useState({});
@@ -21,7 +21,7 @@ export default function ItemDetailContainer() {
     }, []);
 
 
-    const { addItem, delItem } = useContext(cartContext);
+    const { addItem } = useContext(cartContext);
 
     function addToCart() {
         alert(`Agregaste ${product.name} al carrito`);

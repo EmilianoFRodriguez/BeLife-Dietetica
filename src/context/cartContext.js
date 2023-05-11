@@ -47,10 +47,10 @@ export function CartContextProvider({ children }) {
         setCart([...newCart]);
     }
 
-    function getCountInCart() {
-        const total = cart.reduce((acc, item) => acc + item.price, 0)
-        return total;
-    }
+    // function getCountInCart() {
+    //     const total = cart.reduce((acc, item) => acc + item.price, 0)
+    //     return total;
+    // }
 
     function isInCart(id) {
         return cart.find((item) => item.id === id);
